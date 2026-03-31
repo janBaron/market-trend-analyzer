@@ -1,6 +1,7 @@
 from src.data_loader import load_market_data
 from src.indicators import add_indicators
 from src.trend_logic import classify_trend
+from src.plotting import plot_market_analysis
 
 
 def main():
@@ -16,6 +17,9 @@ def main():
 
     print("\nTrend distribution:")
     print(data["Trend"].value_counts())
+
+    plot_market_analysis(data, ticker=ticker)
+    print("\nChart saved to output/trend_chart.png")
 
 
 if __name__ == "__main__":
