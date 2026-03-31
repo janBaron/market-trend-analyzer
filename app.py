@@ -2,6 +2,7 @@ from src.data_loader import load_market_data
 from src.indicators import add_indicators
 from src.trend_logic import classify_trend
 from src.plotting import plot_market_analysis
+from src.reporting import generate_report
 
 
 def main():
@@ -20,6 +21,9 @@ def main():
 
     plot_market_analysis(data, ticker=ticker)
     print("\nChart saved to output/trend_chart.png")
+
+    generate_report(data, ticker=ticker)
+    print("Report saved to output/summary.txt")
 
 
 if __name__ == "__main__":

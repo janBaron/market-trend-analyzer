@@ -1,0 +1,21 @@
+Market Trend Analysis Report for AAPL
+==================================================
+
+Trend Distribution:
+Trend
+Neutral      141
+Uptrend       80
+Downtrend     31
+
+Average Daily Returns by Trend:
+Trend
+Downtrend   -0.001516
+Neutral     -0.000736
+Uptrend      0.004107
+
+Performance Comparison:
+Strategy (Uptrend only): 1.3792
+Buy & Hold: 1.1383
+
+Disclaimer:
+This analysis is simplified and does not account for transaction costs, slippage, or out-of-sample validation.
