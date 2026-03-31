@@ -1,21 +1,21 @@
 from src.data_loader import load_market_data
 from src.indicators import add_indicators
+from src.trend_logic import classify_trend
 
 
 def main():
     ticker = "AAPL"
 
     data = load_market_data(ticker=ticker, period="1y", interval="1d")
-    data_with_indicators = add_indicators(data)
+    data = add_indicators(data)
+    data = classify_trend(data)
 
     print(f"\nLoaded data for {ticker}")
-    print("\nFirst rows with indicators:")
-    print(data_with_indicators.head(25))
+    print("\nLast rows with trend classification:")
+    print(data[["Close", "MA20", "MA50", "Momentum_10", "Volatility_20", "Trend"]].tail(15))
 
-    print("\nColumns:")
-    print(data_with_indicators.columns.tolist())
-
-    print(f"\nShape: {data_with_indicators.shape}")
+    print("\nTrend distribution:")
+    print(data["Trend"].value_counts())
 
 
 if __name__ == "__main__":
