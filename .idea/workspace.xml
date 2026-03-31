@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97287296-ea21-4fb7-8e17-2e1912eaaf36" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/market-trend-analyzer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/market-trend-analyzer.iml" afterDir="false" />
-    </list>
+    <list default="true" id="97287296-ea21-4fb7-8e17-2e1912eaaf36" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +26,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "main"
   }
 }]]></component>
   <component name="SharedIndexes">
