@@ -147,7 +147,7 @@ The focus is on **data processing, analysis, and interpretability**, not financi
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/market-trend-analyzer.git
+git clone https://github.com/janBaron/market-trend-analyzer.git
 cd market-trend-analyzer
 ```
 
