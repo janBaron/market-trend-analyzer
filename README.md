@@ -56,16 +56,23 @@ The goal is **not** to develop a profitable trading system, but to demonstrate:
 
 ## 🖥️ Streamlit Application
 
-The project includes a simple interactive web interface:
+The project includes an interactive Streamlit-based interface for exploring market data and trend signals.
 
-* Input ticker symbols (e.g. `AAPL`, `MSFT`, `SPY`)
-* Select time horizon
-* Run analysis with one click
-* Explore results in multiple tabs:
+### Overview
 
-  * **Overview** (metrics + chart)
-  * **Data** (processed dataset)
-  * **Methodology** (transparent logic)
+![Overview](docs/app_overview.png)
+
+### Market Snapshot & Metrics
+
+![Metrics](docs/app_metrics.png)
+
+### Price and Trend Visualization
+
+![Chart](docs/app_chart.png)
+
+### Data View
+
+![Data](docs/trend_analyizer.png)
 
 ---
 
