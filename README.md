@@ -178,6 +178,7 @@ market-trend-analyzer/
 │
 ├── data/
 ├── output/
+├── docs/
 │
 └── src/
     ├── data_loader.py
