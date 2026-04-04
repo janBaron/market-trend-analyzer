@@ -1,53 +1,78 @@
 # 📈 Market Trend Analyzer
 
-A lightweight Python project for analyzing financial market data using simple quantitative methods.
-The tool retrieves historical price data via an API, computes key indicators, classifies market regimes, and visualizes results.
+A lightweight Python application for analyzing financial market data using simple quantitative methods.
+The tool retrieves historical price data via an API, computes key indicators, classifies market regimes, and presents results through an interactive Streamlit interface.
 
 ---
 
 ## 🚀 Project Motivation
 
-This project was built to explore how basic quantitative indicators can be used to structure and analyze financial time series data.
+This project was built to explore how basic quantitative indicators can be used to structure and analyze financial time series data in a clear and reproducible way.
 
 The goal is **not** to develop a profitable trading system, but to demonstrate:
 
 * data acquisition via APIs
 * data preprocessing and transformation
 * indicator engineering
-* simple rule-based market classification
-* visualization and reporting
+* rule-based market classification
+* interactive visualization and reporting
 
 ---
 
 ## ⚙️ Features
 
-* 📊 **Market Data Retrieval**
+### 📊 Market Data Retrieval
 
-  * Fetches historical price data using `yfinance`
+* Fetches historical price data using `yfinance`
 
-* 🧮 **Indicator Calculation**
+### 🧮 Indicator Calculation
 
-  * Moving Averages (MA20, MA50)
-  * Momentum (10-day)
-  * Daily Returns
-  * Rolling Volatility (20-day)
+* Moving Averages (MA20, MA50)
+* Momentum (10-day)
+* Daily Returns
+* Rolling Volatility (20-day)
 
-* 📉 **Market Regime Classification**
+### 📉 Market Regime Classification
 
-  * Uptrend
-  * Downtrend
-  * Neutral
+* Uptrend
+* Downtrend
+* Neutral
 
-* 📈 **Visualization**
+### 📈 Interactive Web Application
 
-  * Price series with moving averages
-  * Trend signals highlighted
+* Built with **Streamlit**
+* User input for ticker and time period
+* Real-time analysis execution
+* Clear visualization of trends and indicators
 
-* 📄 **Reporting**
+### 📄 Analysis Output
 
-  * Trend distribution
-  * Average returns per regime
-  * Simple strategy vs. buy & hold comparison
+* Market snapshot (latest values)
+* Trend distribution
+* Visual chart with signals
+* Structured data view
+
+---
+
+## 🖥️ Streamlit Application
+
+The project includes an interactive Streamlit-based interface for exploring market data and trend signals.
+
+### Overview
+
+![Overview](docs/app_overview.png)
+
+### Market Snapshot & Metrics
+
+![Metrics](docs/app_metrics.png)
+
+### Price and Trend Visualization
+
+![Chart](docs/app_chart.png)
+
+### Data View
+
+![Data](docs/trend_analyizer.png)
 
 ---
 
@@ -55,34 +80,35 @@ The goal is **not** to develop a profitable trading system, but to demonstrate:
 
 The project applies simple quantitative rules to identify basic market regimes:
 
-* **Uptrend**
+### Uptrend
 
-  * Price > MA20
-  * MA20 > MA50
-  * Positive momentum
+* Price > MA20
+* MA20 > MA50
+* Positive momentum
 
-* **Downtrend**
+### Downtrend
 
-  * Price < MA20
-  * MA20 < MA50
-  * Negative momentum
+* Price < MA20
+* MA20 < MA50
+* Negative momentum
 
-* **Neutral**
+### Neutral
 
-  * All other cases
+* All other cases
 
-These rules are intentionally simple and interpretable.
+These rules are intentionally simple, interpretable, and reproducible.
 
 ---
 
 ## 📊 Example Output
 
-The tool generates:
+The application generates:
 
 * A chart showing price, moving averages, and trend signals
-* A summary report with statistics and performance comparison
+* A structured overview of current market conditions
+* A dataset enriched with indicators and classifications
 
-Example files:
+Example output files (CLI version):
 
 ```
 output/
@@ -101,7 +127,7 @@ This project is for educational and demonstration purposes only.
 * No risk management
 * Not suitable for real trading decisions
 
-The focus is on **data processing and analysis**, not financial performance.
+The focus is on **data processing, analysis, and interpretability**, not financial performance.
 
 ---
 
@@ -112,28 +138,29 @@ The focus is on **data processing and analysis**, not financial performance.
 * numpy
 * matplotlib
 * yfinance
+* **streamlit**
 
 ---
 
 ## ▶️ How to Run
 
-1. Clone the repository:
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/market-trend-analyzer.git
 cd market-trend-analyzer
 ```
 
-2. Install dependencies:
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Run the application:
+### 3. Run the Streamlit app
 
 ```bash
-python app.py
+streamlit run streamlit_app.py
 ```
 
 ---
@@ -143,7 +170,8 @@ python app.py
 ```
 market-trend-analyzer/
 │
-├── app.py
+├── app.py                  # CLI version
+├── streamlit_app.py        # Web application
 ├── config.py
 ├── README.md
 ├── requirements.txt
@@ -168,7 +196,8 @@ This project demonstrates:
 * structured handling of financial time series data
 * implementation of basic quantitative indicators
 * transformation of raw data into interpretable signals
-* clear separation of concerns in code design
+* separation of logic and presentation (analysis vs. UI)
+* basic productization via a lightweight web interface
 
 ---
 
@@ -181,6 +210,7 @@ This project reflects my approach to combining:
 * technical implementation
 * analytical thinking
 * structured problem solving
+* practical usability (via a simple web interface)
 
 ---
 
