@@ -3,6 +3,7 @@ import streamlit as st
 from src.data_loader import load_market_data
 from src.indicators import add_indicators
 from src.trend_logic import classify_trend
+from src.plotting import create_market_plot
 
 
 st.set_page_config(page_title="Market Trend Analyzer", layout="wide")
@@ -51,6 +52,10 @@ if st.button("Run analysis"):
         with col3:
             st.metric("Volatility (20d)", f"{latest_volatility:.4f}")
             st.metric("Detected Trend", current_trend)
+
+        st.subheader("Price and Trend Visualization")
+        fig = create_market_plot(data, ticker)
+        st.pyplot(fig)
 
         st.subheader("Trend Distribution")
         trend_counts = data["Trend"].value_counts()
